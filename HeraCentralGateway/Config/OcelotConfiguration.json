@@ -16,7 +16,7 @@
       },
       "UpstreamPathTemplate": "/api/authentication/authenticate",
       "UpstreamPathMethod": [ "Post" ]
-    },
+    }
   ],
   "GlobalConfiguration": {
     "RequestIdKey": "X-Correlation-Id",

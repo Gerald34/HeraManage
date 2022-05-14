@@ -1,0 +1,3 @@
+[submodule "HeraCentralGateway"]
+	path = HeraCentralGateway
+	url = https://github.com/Gerald34/HeraCentralGateway.git
