@@ -1,0 +1,29 @@
+﻿{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/authentication/authenticate",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 62915
+        }
+      ],
+      "RouteIsCaseSensitive": true,
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": [ "https://localhost:61086" ]
+      },
+      "UpstreamPathTemplate": "/api/authentication/authenticate",
+      "UpstreamPathMethod": [ "Post" ]
+    },
+  ],
+  "GlobalConfiguration": {
+    "RequestIdKey": "X-Correlation-Id",
+    "BaseUrl": "https://localhost:61086"
+  },
+  "Logging": {
+    "default": "Warning"
+  },
+  "AllowedHosts": "*"
+}
