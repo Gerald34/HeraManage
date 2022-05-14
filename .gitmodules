@@ -1,0 +1,9 @@
+[submodule "HeraClientApp"]
+	path = HeraClientApp
+	url = https://github.com/Gerald34/HeraClientApp.git
+[submodule "HeraManage"]
+	path = HeraManage
+	url = https://github.com/Gerald34/HeraManage.git
+[submodule "HeraClientMobile"]
+	path = HeraClientMobile
+	url = https://github.com/Gerald34/HeraClientMobile.git
