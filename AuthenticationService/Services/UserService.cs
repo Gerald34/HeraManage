@@ -6,8 +6,8 @@ using AuthenticationService.Utils;
 
 namespace AuthenticationService.Services
 {
-	public class UserService
-	{
+    public class UserService
+    {
         private UserDbContext _userDbContext;
         private readonly AppSettings _appSettings;
         private dynamic _response = null;
@@ -26,7 +26,7 @@ namespace AuthenticationService.Services
         /// <returns>Dynamic object including user record and token</returns>
         public dynamic Authenticate(AuthenticateRequest authenticateRequest)
         {
-            var user = _userDbContext.AdminUsers.FirstOrDefault(
+            var user = _userDbContext.Users.FirstOrDefault(
                 user => user.username == authenticateRequest.Username
             );
 

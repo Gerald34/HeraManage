@@ -5,14 +5,14 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace AuthenticationService.Controllers
 {
-	[ApiController]
-	[Route("authentication")]
-	public class AuthenticationController : ControllerBase
-	{
+    [ApiController]
+    [Route("authentication")]
+    public class AuthenticationController : ControllerBase
+    {
         private IUserRepository _userRepository;
-		public AuthenticationController(IUserRepository userRepositor)
-		{
-            _userRepository = userRepositor;
+        public AuthenticationController(IUserRepository userRepository)
+        {
+            _userRepository = userRepository;
         }
 
         /// <summary>
@@ -45,7 +45,7 @@ namespace AuthenticationService.Controllers
         /// Get all admin users
         /// </summary>
         /// <returns></returns>
-        [ HttpGet, Authorize]
+        [HttpGet, Authorize]
         public async Task<IActionResult> GetAllAdminUsers()
         {
             var users = _userRepository.GetAll();
