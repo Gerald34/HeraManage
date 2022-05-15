@@ -1,0 +1,8 @@
+[submodule "HeraCentralGateway"]
+	path = HeraCentralGateway
+	url = https://github.com/Gerald34/HeraCentralGateway.git
+[submodule "AuthenticationService"]
+	path = AuthenticationService
+	url = https://github.com/Gerald34/AuthenticationService.git
+
+	
