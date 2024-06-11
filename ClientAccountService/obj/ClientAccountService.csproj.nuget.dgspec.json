@@ -1,30 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "/Applications/MAMP/htdocs/HeraCentral/HeraManage/ClientAccountService/ClientAccountService.csproj": {}
+    "/Users/geraldmathabela/Documents/Projects/Labworx Studio Application/Services/HeraManage/ClientAccountService/ClientAccountService.csproj": {}
   },
   "projects": {
-    "/Applications/MAMP/htdocs/HeraCentral/HeraManage/ClientAccountService/ClientAccountService.csproj": {
+    "/Users/geraldmathabela/Documents/Projects/Labworx Studio Application/Services/HeraManage/ClientAccountService/ClientAccountService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Applications/MAMP/htdocs/HeraCentral/HeraManage/ClientAccountService/ClientAccountService.csproj",
+        "projectUniqueName": "/Users/geraldmathabela/Documents/Projects/Labworx Studio Application/Services/HeraManage/ClientAccountService/ClientAccountService.csproj",
         "projectName": "ClientAccountService",
-        "projectPath": "/Applications/MAMP/htdocs/HeraCentral/HeraManage/ClientAccountService/ClientAccountService.csproj",
-        "packagesPath": "/Users/gmathabela/.nuget/packages/",
-        "outputPath": "/Applications/MAMP/htdocs/HeraCentral/HeraManage/ClientAccountService/obj/",
+        "projectPath": "/Users/geraldmathabela/Documents/Projects/Labworx Studio Application/Services/HeraManage/ClientAccountService/ClientAccountService.csproj",
+        "packagesPath": "/Users/geraldmathabela/.nuget/packages/",
+        "outputPath": "/Users/geraldmathabela/Documents/Projects/Labworx Studio Application/Services/HeraManage/ClientAccountService/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/gmathabela/.nuget/NuGet/NuGet.Config"
+          "/Users/geraldmathabela/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net8.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -35,8 +35,8 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
@@ -89,7 +89,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -101,7 +102,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.203/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

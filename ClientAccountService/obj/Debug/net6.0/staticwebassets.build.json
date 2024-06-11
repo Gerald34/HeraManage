@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "vss+H2gpBzQkFQ5nZWaFyIz8/QSrsu3RkaRRwXesABc=",
+  "Source": "ClientAccountService",
+  "BasePath": "_content/ClientAccountService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

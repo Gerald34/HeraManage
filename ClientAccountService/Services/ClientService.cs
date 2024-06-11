@@ -9,19 +9,18 @@ namespace ClientAccountService.Services
 {
     public class ClientService : IClientAccountRepository
     {
-
         private ClientDbContext _clientDbContext;
         private readonly AppSettings _appSettings;
-        public ClientService(
-            IOptions<AppSettings> appSettings,
-            ClientDbContext clientDbContext)
+
+        public ClientService(IOptions<AppSettings> appSettings,ClientDbContext clientDbContext)
         {
             _clientDbContext = clientDbContext;
             _appSettings = appSettings.Value;
         }
+        
         public dynamic CreateClientAccount(ClientAccountRequest accountRequest)
         {
-            bool userExists = _UserExists(accountRequest.RSAIdNumber);
+            bool userExists = _UserExists(accountRequest.RsaIdNumber);
             if (userExists) return new { error = true, message = "User already exists" };
 
             ClientEntity client = new ClientEntity
@@ -31,7 +30,7 @@ namespace ClientAccountService.Services
                 LastName = accountRequest.LastName,
                 Email = accountRequest.Email,
                 Password = PasswordEncryptor.EncriptString(accountRequest.Password, 1000),
-                RSAIdNumber = (_ValidateRSAIdNumber(accountRequest.RSAIdNumber) ? accountRequest.RSAIdNumber : 0),
+                RSAIdNumber = (_ValidateRSAIdNumber(accountRequest.RsaIdNumber) ? accountRequest.RsaIdNumber : 0),
                 DateOfBirth = accountRequest.DateOfBirth,
                 Gender = accountRequest.Gender,
                 Active = 0,
@@ -55,16 +54,16 @@ namespace ClientAccountService.Services
             return new { error = false, message = "Account created", data = GetClientByRSAId(client.RSAIdNumber) };
         }
 
-        private bool _UserExists(Int64 RSAIdNumber)
+        private bool _UserExists(Int64 rsaIdNumber)
         {
-            var data = GetClientByRSAId(RSAIdNumber);
+            var data = GetClientByRSAId(rsaIdNumber);
             return (data == null) ? false : true;
         }
 
-        public dynamic GetClientByRSAId(Int64 RSAIdNumber)
+        public dynamic GetClientByRSAId(Int64 rsaIdNumber)
         {
             var data = _clientDbContext.Clients?.FirstOrDefault
-                <ClientEntity>(account => account.RSAIdNumber == RSAIdNumber);
+                <ClientEntity>(account => account.RSAIdNumber == rsaIdNumber);
 
             if (data == null)
             {
@@ -88,7 +87,7 @@ namespace ClientAccountService.Services
             return response;
         }
 
-        private bool _ValidateRSAIdNumber(Int64 RSAIdNumber)
+        private bool _ValidateRSAIdNumber(Int64 rsaIdNumber)
         {
             return true;
         }

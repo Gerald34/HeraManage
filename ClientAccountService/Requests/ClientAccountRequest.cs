@@ -14,7 +14,7 @@ namespace ClientAccountService.Requests
         [Required]
         public string Password { get; set; } = string.Empty;
         [Required]
-        public Int64 RSAIdNumber { get; set; }
+        public Int64 RsaIdNumber { get; set; }
         [Required]
         public DateTime DateOfBirth { get; set; }
         [Required]

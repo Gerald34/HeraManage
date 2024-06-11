@@ -1,6 +1,6 @@
 namespace HeraManage.Interfaces
 {
-    public interface Gender
+    public interface GenderEnum
     {
         enum Gender { MALE, FEMALE, OTHER };
     }
